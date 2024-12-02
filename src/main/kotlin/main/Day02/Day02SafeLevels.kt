@@ -1,4 +1,4 @@
-package main.Day01
+package main.Day02
 
 import java.lang.Integer.signum
 import kotlin.math.abs
@@ -26,12 +26,12 @@ fun main() {
 
 fun isSafeReport(s: String): Boolean {
 
-    val iLevels = s.split(" ").map { it.toInt() }
+    val levels = s.split(" ").map { it.toInt() }
     var diff = 0
 
-    for (i in 0..iLevels.size - 2) {
+    for (i in 0..levels.size - 2) {
         val previousDiff = diff
-        diff = iLevels[i] - iLevels[i + 1]
+        diff = levels[i] - levels[i + 1]
         // if the signum of the diff changed, that's an indication that the new level changed the trend.
         if (signum(previousDiff) != 0 && signum(previousDiff) != signum(diff)) {
             return false
