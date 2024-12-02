@@ -1,4 +1,4 @@
-package main;
+package main
 
 
 import java.math.BigInteger
@@ -9,7 +9,7 @@ import kotlin.io.path.readText
 /**
  * Reads lines from the given input txt file.
  */
-fun readInput(name: String) = Path("src/main/kotlin/main/$name.txt").readText().trim().lines()
+fun readInput(name: String) = Path("$name.txt").readText().trim().lines()
 
 /**
  * Converts string to md5 hash.

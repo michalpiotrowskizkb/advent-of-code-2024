@@ -1,11 +1,12 @@
-package main
+package main.Day01
 
 import kotlin.math.abs
+import main.readInput
 
 fun main() {
 
-    // Or read a large test input from the `src/Day01_test.txt` file:
-    val testInput = readInput("Day01_test")
+    // Or read a large test input from the `src/Day02_shortList.txt` file:
+    val testInput = readInput("src/main/kotlin/main/Day01/Day01_test")
 
     val (leftList, rightList) = testInput
         .map { it.split("   ") }
