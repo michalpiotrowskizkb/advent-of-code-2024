@@ -5,7 +5,8 @@ import main.readInput
 
 fun main() {
     val input = readInput("src/main/kotlin/main/Day03/Day03_list")
-    check(declutterAndSumMultiplications("xmul(2,4)%&mul[3,7]!@^do_not_mul(5,5)+mul(32,64]then(mul(11,8)mul(8,5))") == 161)
+    check(declutterAndSumMultiplications("" +
+        "xmul(2,4)%&mul[3,7]!@^do_not_mul(5,5)+mul(32,64]then(mul(11,8)mul(8,5))") == 161)
     println("result = ${findAndSumAllMultiplications(input)}")
 }
 
