@@ -22,13 +22,3 @@ fun declutterAndSumMultiplications(s: String): Int {
             it.groupValues[1].toInt() * it.groupValues[2].toInt()
         }.reduce{ result, multiplied -> result + multiplied }.get()
 }
-
-//fun getResultAndPrintAllOperations(s: String): Int {
-//    return Regex("mul\\((\\d*),(\\d*)\\)")
-//        .findAll(s)
-//        .asStream()
-//        .map {
-//            println("${it.groupValues[0]} | multiplying ${it.groupValues[1].toInt()} * ${it.groupValues[2].toInt()}: ${it.groupValues[1].toInt() * it.groupValues[2].toInt()}")
-//            it.groupValues[1].toInt() * it.groupValues[2].toInt()
-//        }.reduce{ result, multiplied -> result + multiplied }.get()
-//}
