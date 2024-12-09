@@ -59,7 +59,8 @@ fun lookAhead(guard: Guard, matrix2: Array<Array<Char>>): O {
 enum class O {
     END_OF_MAP,
     OBSTACLE,
-    PATH
+    PATH,
+    THEORETICAL_OBSTACLE
 }
 data class Guard(var x: Int, var y: Int, var direction: Direction) {
 
@@ -70,6 +71,13 @@ data class Guard(var x: Int, var y: Int, var direction: Direction) {
 
     fun turn() {
         this.direction = direction.nextDirection()
+    }
+
+    override fun equals(other: Any?): Boolean {
+        if (this.x === (other as Guard).x
+            && this.y === (other as Guard).y
+            && this.direction === (other as Guard).direction) return true
+        return false
     }
 }
 

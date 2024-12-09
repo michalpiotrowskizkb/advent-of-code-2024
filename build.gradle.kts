@@ -14,8 +14,21 @@ configurations.all {
     }
 }
 
+dependencies {
+    testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
+}
+tasks.test {
+    useJUnitPlatform()
+}
+
+tasks.withType<Test> {
+    useJUnitPlatform()
+
+}
 tasks.withType<JavaCompile> {
     options.compilerArgs.add("-Xlint")
     options.compilerArgs.add("-parameters")
     options.encoding = "US-ASCII"
+    options.isWarnings = true
 }
+
